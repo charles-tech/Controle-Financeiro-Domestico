@@ -89,8 +89,9 @@ border-bottom: 2px solid red;
 .introducao{
     display: flex;
     color: var(--PrimeiroTema--);
+    padding: 20px;
    
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
     font-size: 20px;
