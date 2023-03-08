@@ -14,7 +14,7 @@
 <header class="menu__bg">
     <div class="menu">
         <div class="menu__logo">
-            <a href="">Home +- Calc</a>
+            <a href="">R$:Calc</a>
         </div>
 
         <nav class="menu__nav">
@@ -54,6 +54,9 @@
                 <label for="item">Investimento</label>
                 <input class="imput" type="number" name="valorInvestidomento" id="valorInvestidomento"placeholder="Exemplo:R$100">
 
+                <label for="item">Mês</label>
+                <input class="imput" type="number" name="valorMes" id="valorMes"placeholder="Exemplo: 2">
+
                 <input class="imput botao" type="submit" value="Adicionar" class="cadastrar">
 
                 
@@ -65,18 +68,54 @@
 
         <div class="show">
             <ul class="show__titulos">
-                <label class="tituloResultado">Renda Familiar</label>
-                <span id="userValorRenda"></span>
-                <label class="tituloResultado">Mercado</label>
+
+                <div id="resultadoRenda">
+                     <label id="somaRenda" class="tituloResultado">Renda Familiar</label>
+                </div>
+
+                <div id="resultadoMercado">
+                    <label class="tituloResultado">Mercado</label>
+                </div>
+
+                <div id="resultadoLazer">
                 <label class="tituloResultado">Lazer</label>
+                </div>  
+                
+                <div id="resultadoAluguel">
                 <label class="tituloResultado">Aluguel</label>
+                </div>
+
+                <div id="resultadoInvestimento">
                 <label class="tituloResultado">Investimento</label>
+            </div>
+
+            <div id="resultadoMes">
+                
+                <label class="tituloResultado">Mês</label>
+                <select name="mes" id="mes" class="mes">
+                    <option value="1">Janeiro</option>
+                    <option value="2">Fevereiro</option>
+                    <option value="3">Março</option>
+                    <option value="4">Abril</option>
+                    <option value="5">Maio</option>
+                    <option value="6">Junho</option>
+                    <option value="7">Julho</option>
+                    <option value="8">Agosto</option>
+                    <option value="9">Setembro</option>
+                    <option value="10">Outubro</option>
+                    <option value="11">Novembro</option>
+                    <option value="12">Dezembro</option>
+                   
+                  </select>
+            </div>
+
+            
             </ul>
         </div>
 
     </main>
     <footer class="footer">
-        <p>HomeCalc Todos os direitos reservados</p>
+        <p>R$:Calc Todos os direitos reservados</p>
     </footer>
     <script src="js/main.js"></script>
 </body>
