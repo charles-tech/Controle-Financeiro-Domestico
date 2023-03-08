@@ -39,7 +39,7 @@
             <img class="carteira" src="img/porco.jpeg" alt="">
             <form class="adicionar" action="" id="novoItem">
 
-                <label for="item">Renda Familiar</label>
+                <label  for="item">Renda Familiar</label>
                 <input class="imput" type="number" name="valorRenda" id="valorRenda" placeholder="Exemplo: R$2000">
 
                 <label for="item">Mercado</label>
@@ -54,9 +54,23 @@
                 <label for="item">Investimento</label>
                 <input class="imput" type="number" name="valorInvestidomento" id="valorInvestidomento"placeholder="Exemplo:R$100">
 
-                <label for="item">Mês</label>
-                <input class="imput" type="number" name="valorMes" id="valorMes"placeholder="Exemplo: 2">
-
+                
+                <label class="tituloResultado">Mês</label>
+                <select name="mes" id="valorMes" class="imput">
+                    <option value="Janeiro">Janeiro</option>
+                    <option value="Fevereiro">Fevereiro</option>
+                    <option value="Março">Março</option>
+                    <option value="Abril">Abril</option>
+                    <option value="Maio">Maio</option>
+                    <option value="Junho">Junho</option>
+                    <option value="Julho">Julho</option>
+                    <option value="Agosto">Agosto</option>
+                    <option value="Setembro">Setembro</option>
+                    <option value="Outubro">Outubro</option>
+                    <option value="Novembro">Novembro</option>
+                    <option value="Dezembro">Dezembro</option>
+                   
+                  </select>
                 <input class="imput botao" type="submit" value="Adicionar" class="cadastrar">
 
                 
@@ -70,23 +84,23 @@
             <ul class="show__titulos">
 
                 <div id="resultadoRenda">
-                     <label id="somaRenda" class="tituloResultado">Renda Familiar</label>
+                     <label id="somaRenda" class="tituloResultado"></label>
                 </div>
 
                 <div id="resultadoMercado">
-                    <label class="tituloResultado">Mercado</label>
+                    <label id="somaMercado" class="tituloResultado"></label>
                 </div>
 
                 <div id="resultadoLazer">
-                <label class="tituloResultado">Lazer</label>
+                <label id="somaLazer" class="tituloResultado"></label>
                 </div>  
                 
                 <div id="resultadoAluguel">
-                <label class="tituloResultado">Aluguel</label>
+                <label id="somaAluguel" class="tituloResultado"></label>
                 </div>
 
                 <div id="resultadoInvestimento">
-                <label class="tituloResultado">Investimento</label>
+                <label id="somaInvestimento" class="tituloResultado">Investimento</label>
             </div>
 
             <div id="resultadoMes">

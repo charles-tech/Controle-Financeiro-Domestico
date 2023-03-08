@@ -12,7 +12,6 @@ itens.forEach((elemento) => {
     elemento.valorMes
   );
 });
-exibir();
 
 form.addEventListener("submit", (evento) => {
   evento.preventDefault();
@@ -62,4 +61,44 @@ function exibir() {
     valorInvestidomento.innerHTML += `<p>R$: ${elemento.valorInvestidomento}</p>`;
     valorMes.innerHTML += `<p>Mês: ${elemento.valorMes}</p>`;
   });
+
+  const totalRendaFamiliar = Object.values(itensCarregado).reduce(
+    (t, { valorRenda }) => parseFloat(t) + parseFloat(valorRenda),
+    0
+  );
+
+  const totalMercado = Object.values(itensCarregado).reduce(
+    (t, { valorMercado }) => parseFloat(t) + parseFloat(valorMercado),
+    0
+  );
+
+  const totalLazer = Object.values(itensCarregado).reduce(
+    (t, { valorLazer }) => parseFloat(t) + parseFloat(valorLazer),
+    0
+  );
+
+  const totalAluguel = Object.values(itensCarregado).reduce(
+    (t, { valorAluguel }) => parseFloat(t) + parseFloat(valorAluguel),
+    0
+  );
+
+  const totalInvestimento = Object.values(itensCarregado).reduce(
+    (t, { valorInvestidomento }) =>
+      parseFloat(t) + parseFloat(valorInvestidomento),
+    0
+  );
+
+  const totalShowRendaFamiliar = document.getElementById("somaRenda");
+  const totalShowMercado = document.getElementById("somaMercado");
+  const totalShowLazer = document.getElementById("somaLazer");
+  const totalShowAluguel = document.getElementById("somaAluguel");
+  const totalShowInvestimento = document.getElementById("somaInvestimento");
+
+  totalShowRendaFamiliar.innerHTML = `<p>Renda Familiar (R$: ${totalRendaFamiliar})</p>`;
+  totalShowMercado.innerHTML = `<p>Valor Mercado (R$: ${totalMercado})</p>`;
+  totalShowLazer.innerHTML = `<p>Valor Lazer (R$: ${totalLazer})</p>`;
+  totalShowAluguel.innerHTML = `<p>Valor Aluguel (R$: ${totalAluguel})</p>`;
+  totalShowInvestimento.innerHTML = `<p>Valor do Investimento (R$: ${totalInvestimento})</p>`;
+  console.log(totalShowRendaFamiliar);
 }
+exibir();
