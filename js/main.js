@@ -102,3 +102,6 @@ function exibir() {
   console.log(totalShowRendaFamiliar);
 }
 exibir();
+function atualizarPagina() {
+  window.location.reload();
+}
