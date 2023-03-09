@@ -24,7 +24,7 @@ form.addEventListener("submit", (evento) => {
   const valorMes = evento.target.elements["valorMes"];
 
   const itemAtual = {
-    valorRenda: valorRenda.value,
+    valorRenda: { nome: nomeRenda, renda: valorRenda.value },
     valorMercado: valorMercado.value,
     valorLazer: valorLazer.value,
     valorAluguel: valorAluguel.value,
