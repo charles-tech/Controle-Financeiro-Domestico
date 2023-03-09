@@ -105,3 +105,7 @@ exibir();
 function atualizarPagina() {
   window.location.reload();
 }
+function limparLocalStorage() {
+  window.localStorage.clear();
+  atualizarPagina();
+}
