@@ -59,7 +59,7 @@ function exibir() {
     valorLazer.innerHTML += `<p>R$: ${elemento.valorLazer}</p>`;
     valorAluguel.innerHTML += `<p>R$: ${elemento.valorAluguel}</p>`;
     valorInvestidomento.innerHTML += `<p>R$: ${elemento.valorInvestidomento}</p>`;
-    valorMes.innerHTML += `<p>Mês: ${elemento.valorMes}</p>`;
+    valorMes.innerHTML += `<p> ${elemento.valorMes}</p>`;
   });
 
   const totalRendaFamiliar = Object.values(itensCarregado).reduce(
@@ -93,13 +93,14 @@ function exibir() {
   const totalShowLazer = document.getElementById("somaLazer");
   const totalShowAluguel = document.getElementById("somaAluguel");
   const totalShowInvestimento = document.getElementById("somaInvestimento");
+  const totalShowMes = document.getElementById("somaMes");
 
   totalShowRendaFamiliar.innerHTML = `<p>Renda Familiar (R$: ${totalRendaFamiliar})</p>`;
   totalShowMercado.innerHTML = `<p>Valor Mercado (R$: ${totalMercado})</p>`;
   totalShowLazer.innerHTML = `<p>Valor Lazer (R$: ${totalLazer})</p>`;
   totalShowAluguel.innerHTML = `<p>Valor Aluguel (R$: ${totalAluguel})</p>`;
   totalShowInvestimento.innerHTML = `<p>Valor do Investimento (R$: ${totalInvestimento})</p>`;
-  console.log(totalShowRendaFamiliar);
+  totalShowMes.innerHTML = `<p>Mês</p>`;
 }
 exibir();
 function atualizarPagina() {
